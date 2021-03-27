@@ -1,6 +1,6 @@
 (def jme-version "3.3.2-stable")
 
-(defproject jme-clj "0.1.13"
+(defproject jme-clj "0.1.14"
 
   :description "A Clojure 3D Game Engine Wrapper, Powered By jMonkeyEngine"
 
@@ -74,7 +74,7 @@
                          ["eastwood"]]
             "clj-kondo" ["with-profile" "+dev" "run" "-m" "clj-kondo.main"]}
 
-  :jvm-opts ^:replace ["-XX:+UseZGC"
+  :jvm-opts ^:replace [;"-XX:+UseZGC"
                        "-XX:-OmitStackTraceInFastThrow"
                        "-XX:+ScavengeBeforeFullGC"
                        "-XX:+IgnoreUnrecognizedVMOptions"
