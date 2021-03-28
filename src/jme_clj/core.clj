@@ -127,7 +127,7 @@
                             title
                             frame-rate
                             resizable?
-                            audio-renderer]}]
+                            audio-renderer?]}]
   (let [settings (AppSettings. (boolean load-defaults?))]
     (some->> fullscreen? (.setFullscreen settings))
     (some->> vsync? (.setVSync settings))
@@ -137,7 +137,7 @@
     (some->> frequency (.setFrequency settings))
     (some->> frame-rate (.setFrameRate settings))
     (some->> resizable? (.setResizable settings))
-    (some->> audio-renderer (.setAudioRenderer settings))
+    (if (false? audio-renderer?) (.setAudioRenderer settings nil))
     settings))
 
 
