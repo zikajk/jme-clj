@@ -370,10 +370,12 @@
 (defn material [path]
   (Material. (asset-manager) path))
 
-(defn picture [name path]
-  (doto
-      (Picture. name)
-    (.setImage (asset-manager) path true)))
+(defn picture
+  ([name]
+   (Picture. name))
+  ([name path]
+   (doto (Picture. name)
+     (.setImage (asset-manager) path true))))
 
 (defn unshaded-mat []
   (material "Common/MatDefs/Misc/Unshaded.j3md"))
