@@ -17,6 +17,7 @@
    (com.jme3.collision CollisionResults Collidable)
    (com.jme3.effect ParticleEmitter)
    (com.jme3.font BitmapText)
+   (com.jme3.ui Picture)
    (com.jme3.input InputManager RawInputListener)
    (com.jme3.input.controls
     ActionListener
@@ -137,7 +138,8 @@
     (some->> frequency (.setFrequency settings))
     (some->> frame-rate (.setFrameRate settings))
     (some->> resizable? (.setResizable settings))
-    (if (false? audio-renderer?) (.setAudioRenderer settings nil))
+    (when (false? audio-renderer?)
+          (.setAudioRenderer settings nil))
     settings))
 
 
@@ -368,6 +370,10 @@
 (defn material [path]
   (Material. (asset-manager) path))
 
+(defn picture [name path]
+  (doto
+      (Picture. name)
+    (.setImage (asset-manager) path true)))
 
 (defn unshaded-mat []
   (material "Common/MatDefs/Misc/Unshaded.j3md"))
