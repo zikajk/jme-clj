@@ -370,6 +370,9 @@
 (defn material [path]
   (Material. (asset-manager) path))
 
+(defn set-wireframe [^Material material]
+  (.setWireframe (.getAdditionalRenderState material) true))
+
 (defn picture
   ([name]
    (Picture. name))
