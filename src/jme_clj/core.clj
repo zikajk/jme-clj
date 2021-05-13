@@ -139,7 +139,7 @@
     (some->> frame-rate (.setFrameRate settings))
     (some->> resizable? (.setResizable settings))
     (when (false? audio-renderer?)
-          (.setAudioRenderer settings nil))
+      (.setAudioRenderer settings nil))
     settings))
 
 

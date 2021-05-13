@@ -1,4 +1,4 @@
-(def jme-version "3.3.2-stable")
+(def jme-version "3.4.0-beta3")
 
 (defproject jme-clj "0.1.14"
 
@@ -16,13 +16,13 @@
                  [org.jmonkeyengine/jme3-plugins ~jme-version]
                  [org.jmonkeyengine/jme3-terrain ~jme-version]
                  [org.jmonkeyengine/jme3-jogg ~jme-version]
-                 [org.jmonkeyengine/jme3-jogl ~jme-version]
+                 ;; [org.jmonkeyengine/jme3-jogl ~jme-version]
                  [org.jmonkeyengine/jme3-effects ~jme-version]
                  [org.jmonkeyengine/jme3-desktop ~jme-version]
                  [org.jmonkeyengine/jme3-lwjgl ~jme-version]
                  [org.jmonkeyengine/jme3-niftygui ~jme-version]
                  [org.jmonkeyengine/jme3-networking ~jme-version]
-                 [org.jmonkeyengine/jme3-blender ~jme-version]
+                 ;; [org.jmonkeyengine/jme3-blender ~jme-version]
                  [camel-snake-kebab "0.4.2"]
                  [com.github.stephengold/Minie "3.1.0"]
                  [kezban "0.1.92"]
